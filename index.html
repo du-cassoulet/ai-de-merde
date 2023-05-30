@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="index.js" type="module" defer></script>
+    <style>
+      body {
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+      }
+
+      #prompt {
+        padding: 10px;
+        width: 500px;
+        font-size: 17px;
+      }
+
+      button[type="submit"] {
+        font-size: 17px;
+        padding: 10px;
+        margin-left: 10px;
+      }
+
+      #answer {
+        font-size: 18px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <form id="prompt-form">
+        <input type="text" id="prompt" autocomplete="off" />
+        <button type="submit">Submit</button>
+      </form>
+      <p id="answer"></p>
+    </main>
+  </body>
+</html>
