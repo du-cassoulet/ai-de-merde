@@ -1,5 +1,6 @@
 import Stopwords from "./stopwords.js";
 import langs from "./langs.js";
+import baseData from "./data.json" assert { type: "json" };
 
 /**
  * @param {string} string1
@@ -99,7 +100,7 @@ function removeStopwords(text) {
   return lists.sort((a, b) => a.length - b.length)[0].join(" ");
 }
 
-const data = JSON.parse(localStorage.getItem("data") || "{}");
+const data = localStorage.getItem("data") ? JSON.parse(localStorage.getItem("data")): baseData;
 const promptForm = document.getElementById("prompt-form");
 const promptInput = document.getElementById("prompt");
 const answerElement = document.getElementById("answer");
